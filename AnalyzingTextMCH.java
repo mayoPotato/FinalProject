@@ -189,4 +189,24 @@ public class AnalyzingTextMCH {
         System.out.println("the file has been read (" + words.size() + " words)");
     }
 
+    // this is nearly a clone of former main()
+    // only this time, we are just printing the word count for the words the user specifies
+    // there's no need for stop words because the user presumably won't specify stupid words
+    public static void gimmeWords(String fname, ArrayList<String> userListOfWords) {
+        ArrayList<String> words;
+        ArrayList<String> stopWords;
+        int count = 0;
+        words = fileReader( // TODO USE THE RIGHT VARIABLE HERE );
+
+        words.sort(null);
+        ArrayList<Tuple> dict = dictFromWords(words);
+        dict.sort(null);
+
+        // TODO at this point you have a dictionary of words
+        // it's up to you to iterate the userListOfWords and Do The Necessary
+        // it's almost too easy if you just look at how the iteration worked in former main()
+        ... pseudocode
+        iterate(something)
+          print (something);
+    }
 }
