@@ -89,6 +89,7 @@ public class PieChartSample extends Application {
         alert.setHeaderText("Alert Functions");
         //here we have 10 rows with 2 columns
         //Column one is 
+        fnameField = new TextField("beowulf.txt"); // prefilled contents
         textField0 = new TextField("Your word here");
         textField1 = new TextField("Your word here");
         textField2 = new TextField("Your word here");
@@ -100,6 +101,8 @@ public class PieChartSample extends Application {
         textField8 = new TextField("Your word here");
         textField9 = new TextField("Your word here");
         GridPane grid = new GridPane();
+        grid.addRow(0, new Label("Filename here"), fnameField);
+        ... todo ... bump the indexes below
         grid.addRow(0, new Label("Word one here"), textField0);
         grid.addRow(1, new Label("Word one here"), textField1);
         grid.addRow(2, new Label("Word one here"), textField2);
@@ -177,7 +180,14 @@ public class PieChartSample extends Application {
     public static void main(String[] args) {
         launch(args);
         System.out.println("done shitsticks");
-        System.out.println("Field 0: " + textField0.getText());
-        System.out.println("Field 1: " + textField1.getText());
+        ArrayList<String> searchList = new ...
+        searchList.add(textField0.getText())
+        ... repeat for all 10 search fields
+        ... add some code here to print them to prove it works!
+        String filename = fnameField.getText();
+        System.out.println("Field 0: " + textField0.getText()); // this can go away
+        System.out.println("Field 1: " + textField1.getText()); // this can go away, it's going to be in the searchList
+
+        // todo ... call the AnalyzingText class with the filename and the searchList!! Done!!
     }
 }
